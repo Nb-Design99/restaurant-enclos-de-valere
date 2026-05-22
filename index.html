@@ -1,0 +1,1484 @@
+<!DOCTYPE html>
+<html lang="fr" data-lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="L'Enclos de Valère, restaurant gastronomique à Sion. Cuisine du terroir valaisan, jardin-terrasse romantique au pied des châteaux. Réservations : +41 27 323 32 30." />
+  <meta name="keywords" content="restaurant Sion, gastronomique Valais, terrasse jardin, Enclos de Valère, boeuf Hérens, cuisine suisse romande" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#061410" />
+  <link rel="canonical" href="https://enclosdevalere.ch/" />
+
+  <meta property="og:title" content="L'Enclos de Valère — Restaurant gastronomique, Sion" />
+  <meta property="og:description" content="Table de référence au pied des châteaux de Valère et Tourbillon. Cuisine du terroir valaisan, jardin-terrasse romantique." />
+  <meta property="og:type" content="restaurant" />
+  <meta property="og:url" content="https://enclosdevalere.ch/" />
+  <meta property="og:locale" content="fr_CH" />
+  <meta property="og:locale:alternate" content="de_CH" />
+
+  <link rel="alternate" hreflang="fr" href="https://enclosdevalere.ch/" />
+  <link rel="alternate" hreflang="de" href="https://enclosdevalere.ch/?lang=de" />
+
+  <title>L'Enclos de Valère — Restaurant gastronomique, Sion (Valais)</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "L'Enclos de Valère",
+    "description": "Restaurant gastronomique au pied des châteaux de Valère et Tourbillon à Sion, cuisine du terroir valaisan.",
+    "url": "https://enclosdevalere.ch",
+    "telephone": "+41273233230",
+    "email": "restaurant@enclosdevalere.ch",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rue des Châteaux 18",
+      "addressLocality": "Sion",
+      "postalCode": "1950",
+      "addressCountry": "CH"
+    },
+    "geo": { "@type": "GeoCoordinates", "latitude": 46.2298, "longitude": 7.3672 },
+    "servesCuisine": ["Gastronomique", "Cuisine du terroir", "Suisse romande"],
+    "priceRange": "CHF CHF",
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "11:00", "closes": "14:30" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "17:00", "closes": "23:30" }
+    ]
+  }
+  </script>
+
+  <style>
+    /* ====== RESET & BASE ====== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body {
+      font-family: 'DM Sans', system-ui, sans-serif;
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: 1.65;
+      color: var(--cream);
+      background: var(--bg-dark);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    img, svg { display: block; max-width: 100%; }
+    button, input, textarea, select { font: inherit; color: inherit; }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+
+    /* ====== TOKENS ====== */
+    :root {
+      --green-deep: #061410;
+      --green-dark: #0d1f16;
+      --green-mid: #183322;
+      --green-accent: #2e6845;
+      --green-light: #52a070;
+      --green-glow: #7dc99a;
+      --gold: #c9a84c;
+      --gold-light: #e8cc7f;
+      --cream: #f5f0e8;
+      --cream-soft: #ede7d9;
+      --text-muted: rgba(245, 240, 232, 0.62);
+      --text-dim: rgba(245, 240, 232, 0.38);
+      --bg-dark: #040a06;
+      --border-soft: rgba(245, 240, 232, 0.07);
+      --border-medium: rgba(245, 240, 232, 0.13);
+
+      --font-display: 'Cormorant Garamond', Georgia, serif;
+      --font-body: 'DM Sans', system-ui, sans-serif;
+
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --radius-full: 9999px;
+
+      --section-py: clamp(5rem, 10vw, 9rem);
+      --container-max: 1280px;
+      --container-px: clamp(1.25rem, 4vw, 3rem);
+
+      --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+      --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+    }
+
+    /* ====== LAYOUT ====== */
+    .container {
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding-left: var(--container-px);
+      padding-right: var(--container-px);
+      width: 100%;
+    }
+    section {
+      position: relative;
+      padding-top: var(--section-py);
+      padding-bottom: var(--section-py);
+    }
+
+    /* ====== TYPOGRAPHY ====== */
+    .eyebrow {
+      font-family: var(--font-body);
+      text-transform: uppercase;
+      letter-spacing: 0.32em;
+      font-size: 0.72rem;
+      font-weight: 500;
+      color: var(--gold);
+      margin-bottom: 1.25rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .eyebrow::before {
+      content: '';
+      width: 28px;
+      height: 1px;
+      background: var(--gold);
+      display: inline-block;
+    }
+    .section-title {
+      font-family: var(--font-display);
+      font-weight: 400;
+      font-size: clamp(2.4rem, 5vw, 4.2rem);
+      line-height: 1.05;
+      letter-spacing: -0.01em;
+      color: var(--cream);
+      margin-bottom: 1.25rem;
+    }
+    .section-title em {
+      font-style: italic;
+      font-weight: 300;
+      color: var(--gold-light);
+    }
+    .section-subtitle {
+      font-family: var(--font-body);
+      font-weight: 300;
+      font-size: clamp(1rem, 1.4vw, 1.1rem);
+      line-height: 1.7;
+      color: var(--text-muted);
+      max-width: 600px;
+    }
+    .section-header { margin-bottom: 4rem; }
+    .section-header.centered { text-align: center; }
+    .section-header.centered .section-subtitle { margin: 0 auto; }
+    .section-header.centered .eyebrow { margin-left: auto; margin-right: auto; }
+
+    /* ====== BUTTONS ====== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.9rem 1.65rem;
+      font-family: var(--font-body);
+      font-weight: 500;
+      font-size: 0.92rem;
+      letter-spacing: 0.03em;
+      border-radius: var(--radius-full);
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: transform 0.35s var(--ease-out), background 0.3s, border-color 0.3s, box-shadow 0.45s;
+      white-space: nowrap;
+      text-decoration: none;
+      position: relative;
+      overflow: hidden;
+    }
+    .btn:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--gold), #a07830);
+      color: #1a1005;
+      font-weight: 600;
+      border: 1px solid rgba(201, 168, 76, 0.5);
+      box-shadow: 0 8px 32px rgba(201, 168, 76, 0.18);
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 40px rgba(201, 168, 76, 0.35);
+    }
+    .btn-ghost {
+      background: rgba(245, 240, 232, 0.04);
+      color: var(--cream);
+      border: 1px solid var(--border-medium);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+    .btn-ghost:hover {
+      background: rgba(245, 240, 232, 0.09);
+      border-color: rgba(245, 240, 232, 0.3);
+      transform: translateY(-2px);
+    }
+
+    /* ====== HEADER ====== */
+    .header {
+      position: fixed;
+      top: 1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 100;
+      width: calc(100% - 1.5rem);
+      max-width: 1200px;
+      transition: top 0.4s var(--ease-out), background 0.4s, border-color 0.4s, box-shadow 0.4s;
+      background: rgba(6, 20, 16, 0.55);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid var(--border-medium);
+      border-radius: 9999px;
+      padding: 0.45rem 0.5rem 0.45rem 1.5rem;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    }
+    .header.scrolled {
+      top: 0.75rem;
+      background: rgba(6, 20, 16, 0.9);
+      border-color: rgba(245, 240, 232, 0.16);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+    }
+    .header .container { max-width: none; padding: 0; }
+    .nav { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; }
+    .logo {
+      font-family: var(--font-display);
+      font-weight: 500;
+      font-size: 1.5rem;
+      letter-spacing: 0.01em;
+      color: var(--cream);
+      white-space: nowrap;
+    }
+    .logo em { font-style: italic; font-weight: 300; color: var(--gold-light); }
+    .nav-links { display: none; gap: 2rem; align-items: center; }
+    .nav-links a {
+      font-size: 0.88rem;
+      font-weight: 400;
+      color: var(--text-muted);
+      transition: color 0.3s;
+      padding: 0.4rem 0;
+      position: relative;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 0; height: 1px;
+      background: var(--gold);
+      transition: width 0.35s var(--ease-out);
+    }
+    .nav-links a:hover { color: var(--cream); }
+    .nav-links a:hover::after { width: 100%; }
+
+    .nav-right { display: flex; align-items: center; gap: 0.75rem; }
+    .lang-toggle { display: flex; align-items: center; gap: 0.25rem; }
+    .lang-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      padding: 0.25rem 0.4rem;
+      border-radius: 4px;
+      transition: color 0.2s, background 0.2s;
+    }
+    .lang-btn:hover { color: var(--cream); }
+    .lang-btn.active { color: var(--gold); }
+    .lang-sep { color: var(--text-dim); font-size: 0.7rem; }
+    .nav-cta { display: none; padding: 0.6rem 1.2rem; font-size: 0.82rem; }
+    .burger {
+      width: 44px; height: 44px;
+      display: inline-flex;
+      align-items: center; justify-content: center;
+      background: transparent;
+      border: 1px solid var(--border-medium);
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background 0.3s, border-color 0.3s;
+    }
+    .burger:hover { background: rgba(245,240,232,0.05); border-color: rgba(245,240,232,0.25); }
+    .burger-bars { width: 18px; height: 12px; position: relative; }
+    .burger-bars span {
+      position: absolute; left: 0; right: 0;
+      height: 1.5px; background: var(--cream); border-radius: 2px;
+      transition: transform 0.35s var(--ease-out), opacity 0.25s, top 0.35s var(--ease-out);
+    }
+    .burger-bars span:nth-child(1) { top: 0; }
+    .burger-bars span:nth-child(2) { top: 5px; }
+    .burger-bars span:nth-child(3) { top: 10px; }
+    .burger.open .burger-bars span:nth-child(1) { top: 5px; transform: rotate(45deg); }
+    .burger.open .burger-bars span:nth-child(2) { opacity: 0; }
+    .burger.open .burger-bars span:nth-child(3) { top: 5px; transform: rotate(-45deg); }
+
+    /* ====== MOBILE MENU ====== */
+    .mobile-menu {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100vh;
+      background: rgba(4, 10, 6, 0.97);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      z-index: 90;
+      display: flex;
+      align-items: center; justify-content: center;
+      opacity: 0; visibility: hidden;
+      transition: opacity 0.4s var(--ease-out), visibility 0.4s;
+    }
+    .mobile-menu.open { opacity: 1; visibility: visible; }
+    .mobile-menu-inner { display: flex; flex-direction: column; gap: 2.5rem; text-align: center; align-items: center; }
+    .mobile-menu a {
+      font-family: var(--font-display);
+      font-weight: 400;
+      font-size: 2.2rem;
+      color: var(--cream);
+      transition: color 0.3s;
+    }
+    .mobile-menu a:hover { color: var(--gold-light); }
+    .mobile-lang { display: flex; gap: 1rem; margin-top: 1rem; }
+    .mobile-lang button {
+      background: none; border: 1px solid var(--border-medium);
+      border-radius: var(--radius-full);
+      padding: 0.5rem 1.2rem;
+      font-size: 0.85rem; font-weight: 500;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .mobile-lang button.active { color: var(--gold); border-color: var(--gold); }
+    .mobile-lang button:hover { color: var(--cream); border-color: var(--cream-soft); }
+
+    /* ====== HERO ====== */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      padding-top: 8rem;
+      padding-bottom: 6rem;
+    }
+    .hero-photo {
+      position: absolute;
+      inset: 0;
+      background-image: url('https://images.unsplash.com/photo-1559339352-11d035aa65de?w=1920&q=85&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .hero-photo::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(to bottom, rgba(4,10,6,0.55) 0%, rgba(4,10,6,0.2) 40%, rgba(4,10,6,0.6) 80%, rgba(4,10,6,0.95) 100%),
+        linear-gradient(to right, rgba(4,10,6,0.5) 0%, transparent 50%);
+    }
+    .hero-glows {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+    .hero-glow-1 {
+      position: absolute;
+      top: 20%; left: 15%;
+      width: 500px; height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(201, 168, 76, 0.09) 0%, transparent 70%);
+      filter: blur(40px);
+      animation: glowPulse 6s ease-in-out infinite;
+    }
+    .hero-glow-2 {
+      position: absolute;
+      bottom: 25%; right: 10%;
+      width: 400px; height: 400px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(46, 104, 69, 0.15) 0%, transparent 70%);
+      filter: blur(50px);
+      animation: glowPulse 8s ease-in-out 2s infinite;
+    }
+    @keyframes glowPulse {
+      0%, 100% { opacity: 0.7; transform: scale(1); }
+      50%       { opacity: 1;   transform: scale(1.1); }
+    }
+    .hero-overlay-top {
+      position: absolute; top: 0; left: 0; right: 0;
+      height: 120px;
+      background: linear-gradient(to bottom, var(--bg-dark) 0%, transparent 100%);
+      pointer-events: none; z-index: 2;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      text-align: center;
+      max-width: 960px;
+      width: 100%;
+      margin: 0 auto;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.5rem 1.2rem;
+      background: rgba(245, 240, 232, 0.05);
+      border: 1px solid rgba(201, 168, 76, 0.25);
+      border-radius: var(--radius-full);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      margin-bottom: 2.5rem;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 1s var(--ease-out) 0.3s forwards;
+    }
+    .hero-badge-dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--gold);
+      animation: blink 2s ease-in-out infinite;
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50%       { opacity: 0.35; }
+    }
+    .hero-badge span {
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+    }
+    .hero-title {
+      font-family: var(--font-display);
+      font-weight: 300;
+      font-size: clamp(3.2rem, 9vw, 7.5rem);
+      line-height: 0.95;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.35em;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeUp 1.2s var(--ease-out) 0.5s forwards;
+    }
+    .hero-title-main {
+      display: block;
+      background: linear-gradient(135deg, var(--cream) 0%, rgba(245,240,232,0.85) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-title-accent {
+      display: block;
+      font-style: italic;
+      background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 60%, #a07830 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-sub {
+      font-size: clamp(1rem, 1.8vw, 1.2rem);
+      font-weight: 300;
+      color: var(--text-muted);
+      letter-spacing: 0.04em;
+      margin-bottom: 3rem;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 1s var(--ease-out) 0.75s forwards;
+    }
+    .hero-cta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 1s var(--ease-out) 0.95s forwards;
+    }
+    .hero-scroll {
+      position: absolute;
+      bottom: 2.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 3;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--text-dim);
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      opacity: 0;
+      animation: fadeUp 1s var(--ease-out) 1.4s forwards;
+    }
+    .scroll-line {
+      width: 1px;
+      height: 40px;
+      background: linear-gradient(to bottom, var(--gold), transparent);
+      animation: scrollLine 2s ease-in-out infinite;
+    }
+    @keyframes scrollLine {
+      0%, 100% { transform: scaleY(1); opacity: 0.5; }
+      50%       { transform: scaleY(0.5); opacity: 1; }
+    }
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ====== ABOUT ====== */
+    .about { background: var(--bg-dark); }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    .about-photo-wrap {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+    }
+    .about-photo-wrap::before {
+      content: '';
+      position: absolute;
+      inset: -1px;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(135deg, rgba(201, 168, 76, 0.3), transparent 60%);
+      z-index: 1;
+      pointer-events: none;
+    }
+    .about-photo {
+      width: 100%; aspect-ratio: 4/3;
+      object-fit: cover;
+      border-radius: var(--radius-lg);
+      display: block;
+    }
+    .about-badge {
+      position: absolute;
+      bottom: 1.5rem; left: 1.5rem;
+      background: rgba(4, 10, 6, 0.85);
+      border: 1px solid rgba(201, 168, 76, 0.3);
+      border-radius: var(--radius-md);
+      padding: 0.85rem 1.25rem;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      z-index: 2;
+    }
+    .about-badge-title { font-family: var(--font-display); font-size: 1rem; font-style: italic; color: var(--gold-light); }
+    .about-badge-sub { font-size: 0.75rem; color: var(--text-muted); margin-top: 0.2rem; }
+    .about-text p { color: var(--text-muted); line-height: 1.8; margin-bottom: 1.25rem; }
+    .about-text p:last-child { margin-bottom: 0; }
+    .chef-row { display: flex; align-items: center; gap: 1rem; margin-top: 2.5rem; padding-top: 2rem; border-top: 1px solid var(--border-soft); }
+    .chef-avatars { display: flex; }
+    .chef-avatar {
+      width: 52px; height: 52px;
+      border-radius: 50%;
+      border: 2px solid var(--green-dark);
+      overflow: hidden;
+      background: var(--green-mid);
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      color: var(--gold-light);
+    }
+    .chef-avatar:nth-child(2) { margin-left: -12px; }
+    .chef-info { font-size: 0.88rem; }
+    .chef-names { font-weight: 500; color: var(--cream); }
+    .chef-role { color: var(--text-muted); font-size: 0.8rem; }
+
+    /* ====== MENU ====== */
+    .menu-section { background: var(--green-deep); }
+    .menu-tabs {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 3rem;
+    }
+    .menu-tab {
+      padding: 0.6rem 1.4rem;
+      border-radius: var(--radius-full);
+      border: 1px solid var(--border-medium);
+      background: none;
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      transition: all 0.3s;
+    }
+    .menu-tab:hover { color: var(--cream); border-color: rgba(245,240,232,0.25); }
+    .menu-tab.active {
+      background: rgba(201, 168, 76, 0.12);
+      border-color: rgba(201, 168, 76, 0.45);
+      color: var(--gold-light);
+    }
+    .menu-panel { display: none; }
+    .menu-panel.active { display: grid; grid-template-columns: 1fr; gap: 1px; background: var(--border-soft); border-radius: var(--radius-lg); overflow: hidden; }
+    .menu-item {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 1.5rem;
+      padding: 1.5rem 1.75rem;
+      background: rgba(13, 31, 22, 0.6);
+      transition: background 0.3s;
+    }
+    .menu-item:hover { background: rgba(13, 31, 22, 0.95); }
+    .menu-item-text { flex: 1; }
+    .menu-item-name { font-family: var(--font-display); font-size: 1.15rem; font-weight: 400; color: var(--cream); margin-bottom: 0.25rem; }
+    .menu-item-desc { font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; }
+    .menu-item-tag { font-size: 0.72rem; color: var(--green-glow); background: rgba(125, 201, 154, 0.1); padding: 0.15rem 0.5rem; border-radius: 4px; display: inline-block; margin-top: 0.4rem; }
+    .menu-item-price { font-family: var(--font-display); font-size: 1.1rem; color: var(--gold); white-space: nowrap; font-weight: 400; }
+    .menu-formule-note { margin-top: 2rem; padding: 1.5rem; background: rgba(201, 168, 76, 0.06); border: 1px solid rgba(201, 168, 76, 0.2); border-radius: var(--radius-md); }
+    .menu-formule-note p { font-size: 0.9rem; color: var(--text-muted); }
+    .menu-formule-note strong { color: var(--gold-light); }
+
+    /* ====== GALLERY ====== */
+    .gallery { background: var(--bg-dark); }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+      gap: 0.75rem;
+    }
+    .gallery-item {
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      position: relative;
+    }
+    .gallery-item:first-child { grid-column: span 2; }
+    .gallery-item img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      aspect-ratio: 16/9;
+      transition: transform 0.6s var(--ease-out);
+      display: block;
+    }
+    .gallery-item:first-child img { aspect-ratio: 21/9; }
+    .gallery-item:hover img { transform: scale(1.04); }
+    .gallery-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(4,10,6,0.7) 0%, transparent 50%);
+      opacity: 0;
+      transition: opacity 0.4s;
+      display: flex;
+      align-items: flex-end;
+      padding: 1.25rem;
+    }
+    .gallery-item:hover .gallery-overlay { opacity: 1; }
+    .gallery-label { font-family: var(--font-display); font-style: italic; font-size: 1rem; color: var(--cream-soft); }
+
+    /* ====== TESTIMONIALS ====== */
+    .testimonials { background: var(--green-deep); }
+    .testi-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+    .testi-card {
+      background: rgba(13, 31, 22, 0.5);
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      transition: border-color 0.3s, transform 0.3s;
+    }
+    .testi-card:hover { border-color: rgba(201,168,76,0.2); transform: translateY(-3px); }
+    .testi-stars { display: flex; gap: 0.25rem; margin-bottom: 1.25rem; }
+    .testi-star { color: var(--gold); font-size: 0.9rem; }
+    .testi-text { font-family: var(--font-display); font-size: 1.15rem; font-style: italic; line-height: 1.65; color: var(--cream-soft); margin-bottom: 1.5rem; }
+    .testi-author { display: flex; align-items: center; gap: 0.75rem; }
+    .testi-avatar {
+      width: 38px; height: 38px;
+      border-radius: 50%;
+      background: var(--green-mid);
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      color: var(--gold-light);
+      flex-shrink: 0;
+    }
+    .testi-name { font-weight: 500; font-size: 0.88rem; color: var(--cream); }
+    .testi-location { font-size: 0.78rem; color: var(--text-muted); }
+    .testi-source { margin-left: auto; font-size: 0.72rem; color: var(--text-dim); }
+
+    /* ====== RESERVATION ====== */
+    .reservation { background: var(--bg-dark); }
+    .resa-wrap {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+    .resa-info h3 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 400; margin-bottom: 1rem; }
+    .resa-info p { color: var(--text-muted); line-height: 1.8; margin-bottom: 1.5rem; }
+    .resa-tel {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      color: var(--gold-light);
+      letter-spacing: 0.02em;
+      margin-bottom: 0.5rem;
+    }
+    .resa-tel-icon { color: var(--gold); }
+    .resa-hours { font-size: 0.85rem; color: var(--text-muted); }
+    .resa-form { display: grid; gap: 1rem; }
+    .form-row { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+    .field label { font-size: 0.8rem; font-weight: 500; color: var(--text-muted); letter-spacing: 0.06em; text-transform: uppercase; }
+    .field input, .field select, .field textarea {
+      background: rgba(245, 240, 232, 0.04);
+      border: 1px solid var(--border-medium);
+      border-radius: var(--radius-sm);
+      padding: 0.85rem 1rem;
+      font-size: 0.95rem;
+      color: var(--cream);
+      transition: border-color 0.3s, background 0.3s;
+      width: 100%;
+    }
+    .field input:focus, .field select:focus, .field textarea:focus {
+      outline: none;
+      border-color: rgba(201, 168, 76, 0.5);
+      background: rgba(245, 240, 232, 0.07);
+    }
+    .field input::placeholder, .field textarea::placeholder { color: var(--text-dim); }
+    .field select option { background: var(--green-dark); color: var(--cream); }
+    .field textarea { resize: vertical; min-height: 110px; }
+    .form-note { font-size: 0.78rem; color: var(--text-dim); }
+    .form-success { display: none; padding: 1rem 1.5rem; background: rgba(125,201,154,0.1); border: 1px solid rgba(125,201,154,0.3); border-radius: var(--radius-md); color: var(--green-glow); font-size: 0.9rem; }
+
+    /* ====== CONTACT ====== */
+    .contact-section { background: var(--green-deep); }
+    .contact-grid { display: grid; grid-template-columns: 1fr; gap: 3rem; }
+    .contact-info h3 { font-family: var(--font-display); font-size: 1.4rem; font-weight: 400; margin-bottom: 1.5rem; }
+    .info-block { display: flex; gap: 1rem; margin-bottom: 1.5rem; }
+    .info-icon {
+      width: 40px; height: 40px;
+      border-radius: var(--radius-sm);
+      background: rgba(201, 168, 76, 0.1);
+      border: 1px solid rgba(201, 168, 76, 0.2);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      color: var(--gold);
+      font-size: 1rem;
+    }
+    .info-label { font-size: 0.75rem; font-weight: 500; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.2rem; }
+    .info-value { font-size: 0.95rem; color: var(--cream); line-height: 1.6; }
+    .info-value a { color: var(--cream); transition: color 0.2s; }
+    .info-value a:hover { color: var(--gold-light); }
+    .hours-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.35rem 1.5rem; }
+    .hours-day { font-size: 0.85rem; color: var(--text-muted); }
+    .hours-time { font-size: 0.85rem; color: var(--cream-soft); }
+    .closed { color: var(--text-dim); font-style: italic; }
+    .map-wrap {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--border-soft);
+      height: 340px;
+    }
+    .map-wrap iframe { width: 100%; height: 100%; border: none; display: block; }
+    .social-row { display: flex; gap: 0.75rem; margin-top: 1.5rem; }
+    .social-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.55rem 1rem;
+      border: 1px solid var(--border-medium);
+      border-radius: var(--radius-full);
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      transition: all 0.3s;
+    }
+    .social-btn:hover { color: var(--cream); border-color: rgba(245,240,232,0.3); }
+
+    /* ====== FOOTER ====== */
+    footer {
+      background: var(--bg-dark);
+      border-top: 1px solid var(--border-soft);
+      padding: 2.5rem 0;
+    }
+    .footer-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.25rem;
+      text-align: center;
+    }
+    .footer-logo { font-family: var(--font-display); font-size: 1.3rem; font-weight: 400; color: var(--cream); }
+    .footer-logo em { font-style: italic; color: var(--gold-light); }
+    .footer-links { display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center; }
+    .footer-links a { font-size: 0.82rem; color: var(--text-dim); transition: color 0.2s; }
+    .footer-links a:hover { color: var(--text-muted); }
+    .footer-credit { font-size: 0.75rem; color: var(--text-dim); }
+    .footer-credit a { color: var(--gold); transition: opacity 0.2s; }
+    .footer-credit a:hover { opacity: 0.75; }
+
+    /* ====== WHATSAPP FLOAT ====== */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 1.75rem;
+      right: 1.75rem;
+      z-index: 50;
+      width: 56px; height: 56px;
+      border-radius: 50%;
+      background: #25d366;
+      display: flex;
+      align-items: center; justify-content: center;
+      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+      transition: transform 0.3s var(--ease-out), box-shadow 0.3s;
+      color: #fff;
+    }
+    .whatsapp-float:hover { transform: scale(1.08); box-shadow: 0 8px 30px rgba(37, 211, 102, 0.55); }
+    .whatsapp-float svg { width: 28px; height: 28px; }
+
+    /* ====== FADE ANIMATIONS ====== */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out);
+    }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+    .fade-up-delay-1 { transition-delay: 0.1s; }
+    .fade-up-delay-2 { transition-delay: 0.2s; }
+    .fade-up-delay-3 { transition-delay: 0.3s; }
+    .fade-up-delay-4 { transition-delay: 0.4s; }
+
+    /* ====== RESPONSIVE ====== */
+    @media (min-width: 640px) {
+      .form-row { grid-template-columns: 1fr 1fr; }
+      .testi-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (min-width: 768px) {
+      .about-grid { grid-template-columns: 1fr 1fr; }
+      .resa-wrap { grid-template-columns: 1fr 1fr; }
+      .contact-grid { grid-template-columns: 1fr 1fr; }
+      .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+      .gallery-item:first-child { grid-column: span 2; }
+    }
+    @media (min-width: 1024px) {
+      .nav-links { display: flex; }
+      .nav-cta { display: inline-flex; }
+      .burger { display: none; }
+      .testi-grid { grid-template-columns: repeat(3, 1fr); }
+      .gallery-grid { grid-template-columns: repeat(4, 1fr); }
+      .gallery-item:first-child { grid-column: span 2; grid-row: span 2; }
+      .gallery-item:first-child img { aspect-ratio: 1/1; height: 100%; }
+    }
+
+    /* ====== DIVIDER ====== */
+    .divider {
+      width: 60px; height: 1px;
+      background: linear-gradient(to right, var(--gold), transparent);
+      margin: 2rem 0;
+    }
+    .divider.centered { margin: 2rem auto; }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header" id="header">
+  <div class="container">
+    <nav class="nav">
+      <a href="#" class="logo"><em>L'Enclos</em> de Valère</a>
+      <ul class="nav-links">
+        <li><a href="#about" class="t" data-fr="Notre histoire" data-de="Unsere Geschichte">Notre histoire</a></li>
+        <li><a href="#menu" class="t" data-fr="Carte" data-de="Speisekarte">Carte</a></li>
+        <li><a href="#gallery" class="t" data-fr="Galerie" data-de="Galerie">Galerie</a></li>
+        <li><a href="#contact" class="t" data-fr="Contact" data-de="Kontakt">Contact</a></li>
+      </ul>
+      <div class="nav-right">
+        <div class="lang-toggle">
+          <button class="lang-btn active" onclick="setLang('fr')">FR</button>
+          <span class="lang-sep">/</span>
+          <button class="lang-btn" onclick="setLang('de')">DE</button>
+        </div>
+        <a href="#reservation" class="btn btn-primary nav-cta t" data-fr="Réserver" data-de="Reservieren">Réserver</a>
+        <button class="burger" id="burger" aria-label="Menu">
+          <div class="burger-bars">
+            <span></span><span></span><span></span>
+          </div>
+        </button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-inner">
+    <a href="#about" class="t" data-fr="Notre histoire" data-de="Unsere Geschichte">Notre histoire</a>
+    <a href="#menu" class="t" data-fr="Carte" data-de="Speisekarte">Carte</a>
+    <a href="#gallery" class="t" data-fr="Galerie" data-de="Galerie">Galerie</a>
+    <a href="#reservation" class="t" data-fr="Réserver une table" data-de="Tisch reservieren">Réserver une table</a>
+    <a href="#contact" class="t" data-fr="Contact" data-de="Kontakt">Contact</a>
+    <div class="mobile-lang">
+      <button class="active" onclick="setLang('fr'); closeMobileMenu()">FR</button>
+      <button onclick="setLang('de'); closeMobileMenu()">DE</button>
+    </div>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-photo"></div>
+  <div class="hero-glows">
+    <div class="hero-glow-1"></div>
+    <div class="hero-glow-2"></div>
+  </div>
+  <div class="hero-overlay-top"></div>
+
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        <span class="t" data-fr="Restaurant gastronomique · Sion, Valais" data-de="Gastronomisches Restaurant · Sitten, Wallis">Restaurant gastronomique · Sion, Valais</span>
+      </div>
+      <h1 class="hero-title">
+        <span class="hero-title-main t" data-fr="L'Enclos" data-de="L'Enclos">L'Enclos</span>
+        <span class="hero-title-accent t" data-fr="de Valère" data-de="de Valère">de Valère</span>
+      </h1>
+      <p class="hero-sub t" data-fr="Un écrin de verdure au coeur de la vieille ville de Sion, au pied des châteaux de Valère et Tourbillon." data-de="Eine grüne Oase im Herzen der Altstadt von Sitten, am Fusse der Schlösser Valère und Tourbillon.">Un écrin de verdure au coeur de la vieille ville de Sion, au pied des châteaux de Valère et Tourbillon.</p>
+      <div class="hero-cta">
+        <a href="#reservation" class="btn btn-primary t" data-fr="Réserver une table" data-de="Tisch reservieren">Réserver une table</a>
+        <a href="#menu" class="btn btn-ghost t" data-fr="Voir la carte" data-de="Speisekarte ansehen">Voir la carte</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    <span class="t" data-fr="Découvrir" data-de="Entdecken">Découvrir</span>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-photo-wrap fade-up">
+        <img
+          class="about-photo"
+          src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=900&q=80&auto=format&fit=crop"
+          alt="Jardin-terrasse de L'Enclos de Valère"
+          loading="lazy"
+        />
+        <div class="about-badge">
+          <div class="about-badge-title t" data-fr="Jardin-terrasse" data-de="Gartenterrasse">Jardin-terrasse</div>
+          <div class="about-badge-sub t" data-fr="Hauts de la vieille ville de Sion" data-de="Oberstadt von Sitten">Hauts de la vieille ville de Sion</div>
+        </div>
+      </div>
+      <div class="about-text fade-up fade-up-delay-1">
+        <div class="eyebrow t" data-fr="Notre histoire" data-de="Unsere Geschichte">Notre histoire</div>
+        <h2 class="section-title"><em class="t" data-fr="Un lieu" data-de="Ein Ort">Un lieu</em><br><span class="t" data-fr="hors du temps" data-de="ausserhalb der Zeit">hors du temps</span></h2>
+        <div class="divider"></div>
+        <div>
+          <p class="t" data-fr="Nichée dans un jardin extraordinaire au pied des châteaux de Valère et Tourbillon, notre table s'est imposée comme l'une des références gastronomiques de Sion. Le hawthorn sauvage centenaire, les pivoines, le platane et le buis composent un cadre romantique et hors du commun, loin de l'agitation de la ville." data-de="Eingebettet in einen aussergewöhnlichen Garten am Fusse der Schlösser Valère und Tourbillon, hat sich unser Restaurant zu einer der gastronomischen Referenzen Sittens entwickelt. Wilder Weissdorn, hundertjährige Pfingstrosen, Platane und Buchsbaum schaffen einen romantischen Rahmen, weit entfernt vom Stadtlärm.">Nichée dans un jardin extraordinaire au pied des châteaux de Valère et Tourbillon, notre table s'est imposée comme l'une des références gastronomiques de Sion. Le hawthorn sauvage centenaire, les pivoines, le platane et le buis composent un cadre romantique et hors du commun, loin de l'agitation de la ville.</p>
+          <p class="t" data-fr="En cuisine, la philosophie est simple : mettre en valeur les meilleurs produits du terroir valaisan, avec la rigueur du classicisme et l'ouverture aux saveurs du monde. Boeuf d'Hérens, agneau du Val-d'Illiez, filets de perche du lac, champignons des forêts valaisannes : chaque assiette raconte une histoire et une saison." data-de="In der Küche ist die Philosophie einfach: die besten Produkte des Walliser Terroirs in den Vordergrund stellen, mit der Strenge des Klassizismus und der Offenheit gegenüber Aromen aus aller Welt. Hérens-Rind, Val-d'Illiez-Lamm, Seebarschfilets, Pilze aus den Walliser Wäldern: Jeder Teller erzählt eine Geschichte und eine Jahreszeit.">En cuisine, la philosophie est simple : mettre en valeur les meilleurs produits du terroir valaisan, avec la rigueur du classicisme et l'ouverture aux saveurs du monde. Boeuf d'Hérens, agneau du Val-d'Illiez, filets de perche du lac, champignons des forêts valaisannes : chaque assiette raconte une histoire et une saison.</p>
+        </div>
+        <div class="chef-row">
+          <div class="chef-avatars">
+            <div class="chef-avatar">A</div>
+            <div class="chef-avatar">C</div>
+          </div>
+          <div class="chef-info">
+            <div class="chef-names">Antoine Bornet &amp; Christophe Picard</div>
+            <div class="chef-role t" data-fr="Maître rôtisseur · Chef de salle" data-de="Maître rôtisseur · Restaurantleiter">Maître rôtisseur · Chef de salle</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MENU -->
+<section class="menu-section" id="menu">
+  <div class="container">
+    <div class="section-header centered fade-up">
+      <div class="eyebrow t" data-fr="Carte de saison" data-de="Saisonale Speisekarte">Carte de saison</div>
+      <h2 class="section-title"><em class="t" data-fr="La table" data-de="Unser Tisch">La table</em><br><span class="t" data-fr="du chef" data-de="des Chefs">du chef</span></h2>
+      <div class="divider centered"></div>
+      <p class="section-subtitle t" data-fr="Nos menus évoluent au fil des saisons pour honorer les producteurs valaisans. Tous nos plats sont disponibles à la carte ou en menu composé." data-de="Unsere Menüs entwickeln sich mit den Jahreszeiten, um die Walliser Produzenten zu ehren. Alle unsere Gerichte sind à la carte oder als Menü erhältlich.">Nos menus évoluent au fil des saisons pour honorer les producteurs valaisans. Tous nos plats sont disponibles à la carte ou en menu composé.</p>
+    </div>
+
+    <div class="menu-tabs fade-up fade-up-delay-1">
+      <button class="menu-tab active t" onclick="showTab('entrees')" data-fr="Entrées" data-de="Vorspeisen">Entrées</button>
+      <button class="menu-tab t" onclick="showTab('plats')" data-fr="Plats principaux" data-de="Hauptgerichte">Plats principaux</button>
+      <button class="menu-tab t" onclick="showTab('desserts')" data-fr="Desserts" data-de="Desserts">Desserts</button>
+      <button class="menu-tab t" onclick="showTab('menus')" data-fr="Menus composés" data-de="Menüangebote">Menus composés</button>
+    </div>
+
+    <div id="entrees" class="menu-panel active fade-up fade-up-delay-2">
+      <div class="menu-item">
+        <div class="menu-item-text">
+          <div class="menu-item-name">Carpaccio de boeuf d'Hérens</div>
+          <div class="menu-item-desc">Huile de noix du Valais, copeaux de Sbrinz affiné, roquette sauvage et câpres</div>
+        </div>
+        <div class="menu-item-price">CHF 26</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-text">
+          <div class="menu-item-name">Filet de truite fumée maison</div>
+          <div class="menu-item-desc">Crème légère à l'aneth, concombre en pickles, pain de seigle valaisan grillé</div>
+        </div>
+        <div class="menu-item-price">CHF 24</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-text">
+          <div class="menu-item-name">Velouté de topinambours du jardin</div>
+          <div class="menu-item-desc">Huile de truffe noire, chips de jambon cru valaisan, ciboulette fraîche</div>
+          <span class="menu-item-tag t" data-fr="Végétarien" data-de="Vegetarisch">Végétarien</span>
+        </div>
+        <div class="menu-item-price">CHF 22</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-text">
+          <div class="menu-item-name">Tartare de saumon mariné au citron vert</div>
+          <div class="menu-item-desc">Avocat crémeux, crackers au sésame noir, vinaigrette au gingembre</div>
+        </div>
+        <div class="menu-item-price">CHF 25</div>
+      </div>
+    </div>
+
+    <div id="plats" class="menu-panel fade-up">
+      <div class="menu-item">
+        <div class="menu-item-text">
+          <div class="menu-item-name">Filets de perche du lac, beurre blanc au Fendant</div>
+          <div class="menu-item-desc">Asperges vertes, fenouil braisé, herbes fraîches du jardin</div>
+        </div>
+        <div class="menu-item-price">CHF 48</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-text">
+          <div class="menu-item-name">Carré d'agneau du Val-d'Illiez en croûte d'herbes</div>
+          <div class="menu-item-desc">Jus réduit au thym sauvage, gratin dauphinois, haricots verts fins</div>
+        </div>
+        <div class="menu-item-price">CHF 58</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-text">
+          <div class="menu-item-name">Filet de boeuf d'Hérens rôti</div>
+          <div class="menu-item-desc">Sauce au poivre de Sichuan, pommes grenaille sautées, légumes racines glacés</div>
+        </div>
+        <div class="menu-item-price">CHF 62</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-text">
+          <div class="menu-item-name">Risotto aux champignons des forêts valaisannes</div>
+          <div class="menu-item-desc">Parmesan affiné 24 mois, truffe de saison, beurre clarifié et ciboulette</div>
+          <span class="menu-item-tag t" data-fr="Végétarien" data-de="Vegetarisch">Végétarien</span>
+        </div>
+        <div class="menu-item-price">CHF 42</div>
+      </div>
+    </div>
+
+    <div id="desserts" class="menu-panel fade-up">
+      <div class="menu-item">
+        <div class="menu-item-text">
+          <div class="menu-item-name">Fondant au chocolat Villars 70%</div>
+          <div class="menu-item-desc">Glace vanille de Madagascar maison, caramel au beurre salé, tuile dentelle</div>
+        </div>
+        <div class="menu-item-price">CHF 16</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-text">
+          <div class="menu-item-name">Millefeuille crème légère, fraises des champs</div>
+          <div class="menu-item-desc">Coulis de framboises du Valais, sucre glace et pistaches effilées</div>
+        </div>
+        <div class="menu-item-price">CHF 15</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-text">
+          <div class="menu-item-name">Tarte fine aux abricots du Valais</div>
+          <div class="menu-item-desc">Crème d'amandes, glace au miel de montagne, romarin cristallisé</div>
+        </div>
+        <div class="menu-item-price">CHF 14</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-text">
+          <div class="menu-item-name">Sélection de fromages valaisans</div>
+          <div class="menu-item-desc">Raclette affinée des caves, Tomme de brebis, Bagnes AOC, pain aux noix et confiture de figue</div>
+        </div>
+        <div class="menu-item-price">CHF 18</div>
+      </div>
+    </div>
+
+    <div id="menus" class="menu-panel fade-up">
+      <div class="menu-item">
+        <div class="menu-item-text">
+          <div class="menu-item-name t" data-fr="Menu Valère — 3 plats" data-de="Menü Valère — 3 Gänge">Menu Valère — 3 plats</div>
+          <div class="menu-item-desc t" data-fr="Entrée + plat principal + dessert au choix parmi la carte du jour" data-de="Vorspeise + Hauptgericht + Dessert nach Wahl aus der Tageskarte">Entrée + plat principal + dessert au choix parmi la carte du jour</div>
+        </div>
+        <div class="menu-item-price">CHF 78</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-text">
+          <div class="menu-item-name t" data-fr="Menu Tourbillon — 4 plats" data-de="Menü Tourbillon — 4 Gänge">Menu Tourbillon — 4 plats</div>
+          <div class="menu-item-desc t" data-fr="Amuse-bouche + entrée + plat principal + dessert, avec accords mets et vins suggérés" data-de="Amuse-bouche + Vorspeise + Hauptgericht + Dessert, mit Weinempfehlungen">Amuse-bouche + entrée + plat principal + dessert, avec accords mets et vins suggérés</div>
+        </div>
+        <div class="menu-item-price">CHF 98</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-text">
+          <div class="menu-item-name t" data-fr="Menu Végétarien — 3 plats" data-de="Vegetarisches Menü — 3 Gänge">Menu Végétarien — 3 plats</div>
+          <div class="menu-item-desc t" data-fr="Sélection végétarienne du moment, élaborée selon les arrivages du jardin et du marché" data-de="Aktuelle vegetarische Auswahl, nach Garten- und Marktangebot zusammengestellt">Sélection végétarienne du moment, élaborée selon les arrivages du jardin et du marché</div>
+          <span class="menu-item-tag t" data-fr="Végétarien" data-de="Vegetarisch">Végétarien</span>
+        </div>
+        <div class="menu-item-price">CHF 68</div>
+      </div>
+      <div class="menu-formule-note">
+        <p class="t" data-fr="Nos menus sont servis uniquement sur réservation. Une allergie, une intolérance ? Signalez-le lors de votre réservation, nous adaptons chaque menu avec plaisir." data-de="Unsere Menüs werden ausschliesslich auf Reservierung serviert. Eine Allergie, eine Unverträglichkeit? Teilen Sie uns dies bei der Reservierung mit, wir passen jedes Menü gerne an.">Nos menus sont servis uniquement sur réservation. Une allergie, une intolérance ? Signalez-le lors de votre réservation, nous adaptons chaque menu avec plaisir.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery" id="gallery">
+  <div class="container">
+    <div class="section-header centered fade-up">
+      <div class="eyebrow t" data-fr="L'ambiance" data-de="Die Atmosphäre">L'ambiance</div>
+      <h2 class="section-title"><em class="t" data-fr="Le jardin" data-de="Der Garten">Le jardin</em><br><span class="t" data-fr="et la table" data-de="und der Tisch">et la table</span></h2>
+    </div>
+    <div class="gallery-grid fade-up fade-up-delay-1">
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=80&auto=format&fit=crop" alt="Salle du restaurant" loading="lazy" />
+        <div class="gallery-overlay"><span class="gallery-label t" data-fr="La terrasse-jardin" data-de="Die Gartenterrasse">La terrasse-jardin</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&q=80&auto=format&fit=crop" alt="Plat gastronomique" loading="lazy" />
+        <div class="gallery-overlay"><span class="gallery-label t" data-fr="Cuisine du terroir" data-de="Terroir-Küche">Cuisine du terroir</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80&auto=format&fit=crop" alt="Plat valaisan" loading="lazy" />
+        <div class="gallery-overlay"><span class="gallery-label t" data-fr="Saveurs valaisannes" data-de="Walliser Aromen">Saveurs valaisannes</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=800&q=80&auto=format&fit=crop" alt="Cave à vins" loading="lazy" />
+        <div class="gallery-overlay"><span class="gallery-label t" data-fr="Vins du Valais" data-de="Walliser Weine">Vins du Valais</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=800&q=80&auto=format&fit=crop" alt="Dessert gastronomique" loading="lazy" />
+        <div class="gallery-overlay"><span class="gallery-label t" data-fr="Desserts maison" data-de="Hausgemachte Desserts">Desserts maison</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <div class="container">
+    <div class="section-header centered fade-up">
+      <div class="eyebrow t" data-fr="Ils nous ont fait confiance" data-de="Sie haben uns vertraut">Ils nous ont fait confiance</div>
+      <h2 class="section-title"><em class="t" data-fr="Vos" data-de="Ihre">Vos</em> <span class="t" data-fr="impressions" data-de="Eindrücke">impressions</span></h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card fade-up fade-up-delay-1">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text t" data-fr="Une cuisine raffinée dans un cadre de verdure absolument romantique. Le menu Tourbillon était une succession de petites merveilles. On reviendra sans hésiter." data-de="Raffinierte Küche in einem absolut romantischen Grünrahmen. Das Menü Tourbillon war eine Folge kleiner Wunder. Wir kommen definitiv wieder.">"Une cuisine raffinée dans un cadre de verdure absolument romantique. Le menu Tourbillon était une succession de petites merveilles. On reviendra sans hésiter."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">M</div>
+          <div>
+            <div class="testi-name">Marie-F.</div>
+            <div class="testi-location t" data-fr="Habitante de Sion" data-de="Einwohnerin von Sitten">Habitante de Sion</div>
+          </div>
+          <div class="testi-source">Tripadvisor</div>
+        </div>
+      </div>
+      <div class="testi-card fade-up fade-up-delay-2">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text t" data-fr="Le top du top sur les hauts de la vieille ville. Antoine et Christophe sont des hôtes exceptionnels, le service est à la hauteur de la cuisine. Adresse incontournable en Valais." data-de="Das Nonplusultra in der Oberstadt. Antoine und Christophe sind aussergewöhnliche Gastgeber, der Service ist so gut wie die Küche. Eine unverzichtbare Adresse im Wallis.">"Le top du top sur les hauts de la vieille ville. Antoine et Christophe sont des hôtes exceptionnels, le service est à la hauteur de la cuisine. Adresse incontournable en Valais."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">T</div>
+          <div>
+            <div class="testi-name">Thomas K.</div>
+            <div class="testi-location t" data-fr="Visiteur de passage" data-de="Durchreisender Gast">Visiteur de passage</div>
+          </div>
+          <div class="testi-source">Google</div>
+        </div>
+      </div>
+      <div class="testi-card fade-up fade-up-delay-3">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text t" data-fr="La terrasse en été, c'est magique. On se croirait dans un jardin secret au coeur du Moyen Age, avec dans l'assiette une cuisine d'une précision remarquable. Un vrai bonheur." data-de="Die Terrasse im Sommer ist magisch. Man fühlt sich wie in einem Geheimgarten im Herzen des Mittelalters, mit einem kulinarisch äusserst präzisen Teller. Ein echtes Vergnügen.">"La terrasse en été, c'est magique. On se croirait dans un jardin secret au coeur du Moyen Age, avec dans l'assiette une cuisine d'une précision remarquable. Un vrai bonheur."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">S</div>
+          <div>
+            <div class="testi-name">Sophie M.</div>
+            <div class="testi-location t" data-fr="Sion" data-de="Sitten">Sion</div>
+          </div>
+          <div class="testi-source">Tripadvisor</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESERVATION -->
+<section class="reservation" id="reservation">
+  <div class="container">
+    <div class="resa-wrap">
+      <div class="resa-info fade-up">
+        <div class="eyebrow t" data-fr="Réservation" data-de="Reservierung">Réservation</div>
+        <h2 class="section-title"><em class="t" data-fr="Réservez" data-de="Reservieren">Réservez</em><br><span class="t" data-fr="votre table" data-de="Sie Ihren Tisch">votre table</span></h2>
+        <div class="divider"></div>
+        <p class="t" data-fr="Nos menus gastronomiques sont proposés sur réservation. Pour les groupes de plus de 8 personnes ou les événements privés, contactez-nous directement." data-de="Unsere Gastromenüs werden auf Reservierung angeboten. Für Gruppen von mehr als 8 Personen oder private Veranstaltungen kontaktieren Sie uns bitte direkt.">Nos menus gastronomiques sont proposés sur réservation. Pour les groupes de plus de 8 personnes ou les événements privés, contactez-nous directement.</p>
+        <a href="tel:+41273233230" class="resa-tel">
+          <span class="resa-tel-icon">☎</span>
+          +41 27 323 32 30
+        </a>
+        <div class="resa-hours t" data-fr="Mar – Sam, 11h00 – 14h30 / 17h00 – 23h30" data-de="Di – Sa, 11.00 – 14.30 / 17.00 – 23.30">Mar – Sam, 11h00 – 14h30 / 17h00 – 23h30</div>
+      </div>
+
+      <div class="fade-up fade-up-delay-1">
+        <form class="resa-form" id="resaForm" action="https://formspree.io/f/XXXXXXXX" method="POST">
+          <div class="form-row">
+            <div class="field">
+              <label class="t" data-fr="Prénom et nom" data-de="Vor- und Nachname">Prénom et nom</label>
+              <input type="text" name="name" required placeholder="Jean Dupont" class="t" data-fr-placeholder="Jean Dupont" data-de-placeholder="Hans Muster" />
+            </div>
+            <div class="field">
+              <label class="t" data-fr="Téléphone" data-de="Telefon">Téléphone</label>
+              <input type="tel" name="phone" placeholder="+41 79 000 00 00" />
+            </div>
+          </div>
+          <div class="field">
+            <label class="t" data-fr="Email" data-de="E-Mail">Email</label>
+            <input type="email" name="email" required placeholder="vous@exemple.ch" class="t" data-fr-placeholder="vous@exemple.ch" data-de-placeholder="sie@beispiel.ch" />
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label class="t" data-fr="Date souhaitée" data-de="Gewünschtes Datum">Date souhaitée</label>
+              <input type="date" name="date" required />
+            </div>
+            <div class="field">
+              <label class="t" data-fr="Nombre de couverts" data-de="Anzahl Personen">Nombre de couverts</label>
+              <select name="guests" required>
+                <option value="">—</option>
+                <option>1</option><option>2</option><option>3</option>
+                <option>4</option><option>5</option><option>6</option>
+                <option>7</option><option value="8+">8+</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label class="t" data-fr="Service" data-de="Service">Service</label>
+            <select name="service" required>
+              <option value="">—</option>
+              <option value="midi" class="t" data-fr="Midi (11h00 – 14h30)" data-de="Mittag (11.00 – 14.30)">Midi (11h00 – 14h30)</option>
+              <option value="soir" class="t" data-fr="Soir (17h00 – 23h30)" data-de="Abend (17.00 – 23.30)">Soir (17h00 – 23h30)</option>
+            </select>
+          </div>
+          <div class="field">
+            <label class="t" data-fr="Remarques / Allergies" data-de="Anmerkungen / Allergien">Remarques / Allergies</label>
+            <textarea name="message" placeholder="Intolérance, occasion spéciale, chaise haute..." class="t" data-fr-placeholder="Intolérance, occasion spéciale, chaise haute..." data-de-placeholder="Unverträglichkeit, besonderer Anlass, Hochstuhl..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary t" data-fr="Envoyer la demande" data-de="Anfrage senden">Envoyer la demande</button>
+          <p class="form-note t" data-fr="Nous confirmons votre réservation par téléphone ou email dans les 24h." data-de="Wir bestätigen Ihre Reservierung innerhalb von 24 Stunden telefonisch oder per E-Mail.">Nous confirmons votre réservation par téléphone ou email dans les 24h.</p>
+          <div class="form-success" id="formSuccess">
+            <span class="t" data-fr="Votre demande a bien été envoyée. Nous vous recontactons dans les 24h." data-de="Ihre Anfrage wurde erfolgreich gesendet. Wir melden uns innerhalb von 24 Stunden.">Votre demande a bien été envoyée. Nous vous recontactons dans les 24h.</span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="eyebrow t" data-fr="Nous trouver" data-de="Uns finden">Nous trouver</div>
+      <h2 class="section-title"><em class="t" data-fr="Infos" data-de="Informationen">Infos</em> <span class="t" data-fr="pratiques" data-de="praktisches">pratiques</span></h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info fade-up">
+        <div class="info-block">
+          <div class="info-icon">📍</div>
+          <div>
+            <div class="info-label t" data-fr="Adresse" data-de="Adresse">Adresse</div>
+            <div class="info-value">Rue des Châteaux 18<br>1950 Sion, Valais</div>
+          </div>
+        </div>
+        <div class="info-block">
+          <div class="info-icon">📞</div>
+          <div>
+            <div class="info-label t" data-fr="Téléphone" data-de="Telefon">Téléphone</div>
+            <div class="info-value"><a href="tel:+41273233230">+41 27 323 32 30</a></div>
+          </div>
+        </div>
+        <div class="info-block">
+          <div class="info-icon">✉</div>
+          <div>
+            <div class="info-label t" data-fr="Email" data-de="E-Mail">Email</div>
+            <div class="info-value"><a href="mailto:restaurant@enclosdevalere.ch">restaurant@enclosdevalere.ch</a></div>
+          </div>
+        </div>
+        <div class="info-block">
+          <div class="info-icon">🕐</div>
+          <div>
+            <div class="info-label t" data-fr="Horaires" data-de="Öffnungszeiten">Horaires</div>
+            <div class="info-value">
+              <div class="hours-grid">
+                <div class="hours-day t" data-fr="Mardi – Samedi" data-de="Dienstag – Samstag">Mardi – Samedi</div>
+                <div class="hours-time">11h00 – 14h30</div>
+                <div class="hours-day"></div>
+                <div class="hours-time">17h00 – 23h30</div>
+                <div class="hours-day t" data-fr="Dimanche – Lundi" data-de="Sonntag – Montag">Dimanche – Lundi</div>
+                <div class="hours-time closed t" data-fr="Fermé" data-de="Geschlossen">Fermé</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="social-row">
+          <a href="https://www.facebook.com/EnclosdeValere" target="_blank" rel="noopener" class="social-btn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            Facebook
+          </a>
+          <a href="https://www.instagram.com" target="_blank" rel="noopener" class="social-btn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            Instagram
+          </a>
+        </div>
+      </div>
+      <div class="fade-up fade-up-delay-1">
+        <div class="map-wrap">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2745.4!2d7.3672!3d46.2298!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478eed3990a7a5d1%3A0x2c1bc03e23d4cf14!2sRue%20des%20Ch%C3%A2teaux%2018%2C%201950%20Sion!5e0!3m2!1sfr!2sch!4v1716000000000"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="L'Enclos de Valère sur Google Maps"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-logo"><em>L'Enclos</em> de Valère</div>
+      <div class="footer-links">
+        <a href="#about" class="t" data-fr="Notre histoire" data-de="Unsere Geschichte">Notre histoire</a>
+        <a href="#menu" class="t" data-fr="Carte" data-de="Speisekarte">Carte</a>
+        <a href="#gallery" class="t" data-fr="Galerie" data-de="Galerie">Galerie</a>
+        <a href="#reservation" class="t" data-fr="Réserver" data-de="Reservieren">Réserver</a>
+        <a href="#contact" class="t" data-fr="Contact" data-de="Kontakt">Contact</a>
+      </div>
+      <p class="footer-credit t" data-fr="Site réalisé par <a href='https://nb-design.ch' target='_blank' rel='noopener'>NB-Design</a> · Spécialiste des sites web pour restaurants en Suisse romande" data-de="Website erstellt von <a href='https://nb-design.ch' target='_blank' rel='noopener'>NB-Design</a> · Spezialist für Restaurant-Websites in der Westschweiz">Site réalisé par <a href="https://nb-design.ch" target="_blank" rel="noopener">NB-Design</a> · Spécialiste des sites web pour restaurants en Suisse romande</p>
+    </div>
+  </div>
+</footer>
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/41273233230" target="_blank" rel="noopener" class="whatsapp-float" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+<script>
+  /* ====== HEADER SCROLL ====== */
+  const header = document.getElementById('header');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 60);
+  }, { passive: true });
+
+  /* ====== MOBILE MENU ====== */
+  const burger = document.getElementById('burger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  burger.addEventListener('click', () => {
+    burger.classList.toggle('open');
+    mobileMenu.classList.toggle('open');
+    document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+  });
+  mobileMenu.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => closeMobileMenu());
+  });
+  function closeMobileMenu() {
+    burger.classList.remove('open');
+    mobileMenu.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  /* ====== LANG TOGGLE ====== */
+  function setLang(lang) {
+    document.documentElement.lang = lang;
+    document.documentElement.dataset.lang = lang;
+
+    document.querySelectorAll('.t').forEach(el => {
+      const val = el.dataset[lang] || el.dataset.fr;
+      if (val) el.innerHTML = val;
+    });
+
+    document.querySelectorAll('[data-' + lang + '-placeholder]').forEach(el => {
+      el.placeholder = el.dataset[lang + 'Placeholder'] || '';
+    });
+
+    document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+    document.querySelectorAll('.mobile-lang button').forEach(btn => btn.classList.remove('active'));
+
+    const target = `setLang('${lang}')`;
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      if (btn.getAttribute('onclick') === target) btn.classList.add('active');
+    });
+    const mobileBtns = document.querySelectorAll('.mobile-lang button');
+    if (lang === 'fr' && mobileBtns[0]) mobileBtns[0].classList.add('active');
+    if (lang === 'de' && mobileBtns[1]) mobileBtns[1].classList.add('active');
+
+    const url = new URL(window.location);
+    if (lang === 'de') { url.searchParams.set('lang', 'de'); }
+    else { url.searchParams.delete('lang'); }
+    window.history.replaceState({}, '', url);
+  }
+
+  /* Init lang from URL */
+  const urlLang = new URLSearchParams(window.location.search).get('lang');
+  if (urlLang === 'de') setLang('de');
+
+  /* ====== MENU TABS ====== */
+  function showTab(id) {
+    document.querySelectorAll('.menu-panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.menu-tab').forEach(t => t.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    event.target.classList.add('active');
+  }
+
+  /* ====== FADE ON SCROLL ====== */
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  /* ====== FORM SUBMIT ====== */
+  const resaForm = document.getElementById('resaForm');
+  resaForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = resaForm.querySelector('button[type=submit]');
+    btn.textContent = '...';
+    btn.disabled = true;
+    try {
+      const res = await fetch(resaForm.action, {
+        method: 'POST',
+        body: new FormData(resaForm),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        resaForm.reset();
+        document.getElementById('formSuccess').style.display = 'block';
+        btn.style.display = 'none';
+      } else {
+        btn.textContent = document.documentElement.lang === 'de' ? 'Anfrage senden' : 'Envoyer la demande';
+        btn.disabled = false;
+        alert(document.documentElement.lang === 'de' ? 'Fehler. Bitte versuchen Sie es erneut.' : 'Erreur. Veuillez réessayer ou nous appeler.');
+      }
+    } catch {
+      btn.textContent = 'Envoyer la demande';
+      btn.disabled = false;
+    }
+  });
+</script>
+</body>
+</html>

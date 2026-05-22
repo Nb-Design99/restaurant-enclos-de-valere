@@ -997,132 +997,240 @@
     </div>
 
     <div class="menu-tabs fade-up fade-up-delay-1">
-      <button class="menu-tab active t" onclick="showTab('entrees')" data-fr="Entrées" data-de="Vorspeisen">Entrées</button>
-      <button class="menu-tab t" onclick="showTab('plats')" data-fr="Plats principaux" data-de="Hauptgerichte">Plats principaux</button>
-      <button class="menu-tab t" onclick="showTab('desserts')" data-fr="Desserts" data-de="Desserts">Desserts</button>
-      <button class="menu-tab t" onclick="showTab('menus')" data-fr="Menus composés" data-de="Menüangebote">Menus composés</button>
+      <button class="menu-tab active t" onclick="showTab(this,'entrees')" data-fr="Entrées" data-de="Vorspeisen">Entrées</button>
+      <button class="menu-tab t" onclick="showTab(this,'viandes')" data-fr="Viandes" data-de="Fleisch">Viandes</button>
+      <button class="menu-tab t" onclick="showTab(this,'poissons')" data-fr="Poissons" data-de="Fisch">Poissons</button>
+      <button class="menu-tab t" onclick="showTab(this,'desserts')" data-fr="Desserts" data-de="Desserts">Desserts</button>
+      <button class="menu-tab t" onclick="showTab(this,'menus')" data-fr="Menus composés" data-de="Menüangebote">Menus composés</button>
     </div>
 
+    <!-- ENTRÉES -->
     <div id="entrees" class="menu-panel active fade-up fade-up-delay-2">
       <div class="menu-item">
         <div class="menu-item-text">
           <div class="menu-item-name">Carpaccio de boeuf d'Hérens</div>
-          <div class="menu-item-desc">Huile de noix du Valais, copeaux de Sbrinz affiné, roquette sauvage et câpres</div>
+          <div class="menu-item-desc">Huile de noix du Valais, copeaux de Sbrinz affiné 18 mois, roquette sauvage, câpres et zeste de citron</div>
         </div>
         <div class="menu-item-price">CHF 26</div>
       </div>
       <div class="menu-item">
         <div class="menu-item-text">
+          <div class="menu-item-name">Foie gras de canard mi-cuit</div>
+          <div class="menu-item-desc">Chutney d'abricots du Valais, pain brioché toasté, fleur de sel et poivre de Timut</div>
+        </div>
+        <div class="menu-item-price">CHF 32</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-text">
+          <div class="menu-item-name">Tartare de saumon mariné au citron vert</div>
+          <div class="menu-item-desc">Avocat crémeux, crackers au sésame noir, vinaigrette au gingembre frais et coriandre</div>
+        </div>
+        <div class="menu-item-price">CHF 25</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-text">
           <div class="menu-item-name">Filet de truite fumée maison</div>
-          <div class="menu-item-desc">Crème légère à l'aneth, concombre en pickles, pain de seigle valaisan grillé</div>
+          <div class="menu-item-desc">Crème légère à l'aneth, concombre en pickles au vinaigre de cidre, pain de seigle valaisan grillé</div>
         </div>
         <div class="menu-item-price">CHF 24</div>
       </div>
       <div class="menu-item">
         <div class="menu-item-text">
           <div class="menu-item-name">Velouté de topinambours du jardin</div>
-          <div class="menu-item-desc">Huile de truffe noire, chips de jambon cru valaisan, ciboulette fraîche</div>
+          <div class="menu-item-desc">Huile de truffe noire, chips de jambon cru valaisan, ciboulette fraîche et mousse de lait</div>
           <span class="menu-item-tag t" data-fr="Végétarien" data-de="Vegetarisch">Végétarien</span>
         </div>
         <div class="menu-item-price">CHF 22</div>
       </div>
       <div class="menu-item">
         <div class="menu-item-text">
-          <div class="menu-item-name">Tartare de saumon mariné au citron vert</div>
-          <div class="menu-item-desc">Avocat crémeux, crackers au sésame noir, vinaigrette au gingembre</div>
+          <div class="menu-item-name">Burrata crémeuse, tomates coeur de boeuf</div>
+          <div class="menu-item-desc">Pesto de basilic maison, roquette sauvage, huile d'olive extra-vierge et fleur de sel</div>
+          <span class="menu-item-tag t" data-fr="Végétarien" data-de="Vegetarisch">Végétarien</span>
         </div>
-        <div class="menu-item-price">CHF 25</div>
+        <div class="menu-item-price">CHF 21</div>
       </div>
     </div>
 
-    <div id="plats" class="menu-panel fade-up">
-      <div class="menu-item">
-        <div class="menu-item-text">
-          <div class="menu-item-name">Filets de perche du lac, beurre blanc au Fendant</div>
-          <div class="menu-item-desc">Asperges vertes, fenouil braisé, herbes fraîches du jardin</div>
-        </div>
-        <div class="menu-item-price">CHF 48</div>
-      </div>
-      <div class="menu-item">
-        <div class="menu-item-text">
-          <div class="menu-item-name">Carré d'agneau du Val-d'Illiez en croûte d'herbes</div>
-          <div class="menu-item-desc">Jus réduit au thym sauvage, gratin dauphinois, haricots verts fins</div>
-        </div>
-        <div class="menu-item-price">CHF 58</div>
-      </div>
+    <!-- VIANDES -->
+    <div id="viandes" class="menu-panel fade-up">
       <div class="menu-item">
         <div class="menu-item-text">
           <div class="menu-item-name">Filet de boeuf d'Hérens rôti</div>
-          <div class="menu-item-desc">Sauce au poivre de Sichuan, pommes grenaille sautées, légumes racines glacés</div>
+          <div class="menu-item-desc">Sauce au poivre vert de Madagascar, gratin dauphinois à l'ail confit, haricots verts fins sautés au beurre</div>
         </div>
         <div class="menu-item-price">CHF 62</div>
       </div>
       <div class="menu-item">
         <div class="menu-item-text">
+          <div class="menu-item-name">Carré d'agneau du Val-d'Illiez en croûte d'herbes</div>
+          <div class="menu-item-desc">Jus réduit au thym sauvage et romarin, gratin de pommes de terre à la raclette, ratatouille provençale</div>
+        </div>
+        <div class="menu-item-price">CHF 58</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-text">
+          <div class="menu-item-name">Côte de veau de lait rôtie aux morilles</div>
+          <div class="menu-item-desc">Crème de morilles fraîches, purée de pommes de terre au beurre demi-sel, asperges vertes</div>
+        </div>
+        <div class="menu-item-price">CHF 56</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-text">
+          <div class="menu-item-name">Magret de canard aux cerises du Valais</div>
+          <div class="menu-item-desc">Sauce cerise et vinaigre balsamique vieilli, polenta crémeuse au parmesan, légumes racines glacés au miel</div>
+        </div>
+        <div class="menu-item-price">CHF 48</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-text">
+          <div class="menu-item-name">Entrecôte grillée au feu de bois</div>
+          <div class="menu-item-desc">Beurre maître d'hôtel aux herbes du jardin, frites maison et salade verte à la vinaigrette de Fendant</div>
+        </div>
+        <div class="menu-item-price">CHF 52</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-text">
           <div class="menu-item-name">Risotto aux champignons des forêts valaisannes</div>
-          <div class="menu-item-desc">Parmesan affiné 24 mois, truffe de saison, beurre clarifié et ciboulette</div>
+          <div class="menu-item-desc">Parmesan affiné 24 mois, copeaux de truffe noire de saison, beurre clarifié et ciboulette fraîche</div>
           <span class="menu-item-tag t" data-fr="Végétarien" data-de="Vegetarisch">Végétarien</span>
         </div>
         <div class="menu-item-price">CHF 42</div>
       </div>
     </div>
 
+    <!-- POISSONS -->
+    <div id="poissons" class="menu-panel fade-up">
+      <div class="menu-item">
+        <div class="menu-item-text">
+          <div class="menu-item-name">Filets de perche du lac, beurre blanc au Fendant</div>
+          <div class="menu-item-desc">Asperges vertes poêlées, fenouil braisé à l'orange, herbes fraîches du jardin et citron confit</div>
+        </div>
+        <div class="menu-item-price">CHF 48</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-text">
+          <div class="menu-item-name">Saint-Jacques poêlées, crème de chou-fleur</div>
+          <div class="menu-item-desc">Noisettes torréfiées, lard valaisan croustillant, jus de coquillages réduit et huile de persil</div>
+        </div>
+        <div class="menu-item-price">CHF 54</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-text">
+          <div class="menu-item-name">Dos de saumon confit à l'huile d'olive</div>
+          <div class="menu-item-desc">Risotto à l'encre de seiche, émulsion au safran, courgettes à la plancha et herbes aromatiques</div>
+        </div>
+        <div class="menu-item-price">CHF 46</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-text">
+          <div class="menu-item-name">Loup de mer en croûte de sel de Guérande</div>
+          <div class="menu-item-desc">Légumes de saison rôtis au four, beurre nantais aux câpres, pommes de terre nouvelles et aneth</div>
+        </div>
+        <div class="menu-item-price">CHF 52</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-text">
+          <div class="menu-item-name">Tataki de thon rouge, marinade soja-sésame</div>
+          <div class="menu-item-desc">Salade d'algues wakamé, purée d'edamame, vinaigrette yuzu et graines de sésame noir et blanc</div>
+        </div>
+        <div class="menu-item-price">CHF 44</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-text">
+          <div class="menu-item-name">Homard breton demi-portion, beurre à l'estragon</div>
+          <div class="menu-item-desc">Pommes grenaille rôties au four, mesclun de saison et vinaigrette au champagne</div>
+        </div>
+        <div class="menu-item-price">CHF 68</div>
+      </div>
+    </div>
+
+    <!-- DESSERTS -->
     <div id="desserts" class="menu-panel fade-up">
       <div class="menu-item">
         <div class="menu-item-text">
           <div class="menu-item-name">Fondant au chocolat Villars 70%</div>
-          <div class="menu-item-desc">Glace vanille de Madagascar maison, caramel au beurre salé, tuile dentelle</div>
+          <div class="menu-item-desc">Coeur coulant, glace vanille de Madagascar maison, caramel au beurre salé et tuile dentelle croustillante</div>
         </div>
         <div class="menu-item-price">CHF 16</div>
       </div>
       <div class="menu-item">
         <div class="menu-item-text">
-          <div class="menu-item-name">Millefeuille crème légère, fraises des champs</div>
-          <div class="menu-item-desc">Coulis de framboises du Valais, sucre glace et pistaches effilées</div>
+          <div class="menu-item-name">Tarte fine aux abricots du Valais</div>
+          <div class="menu-item-desc">Crème d'amandes, glace au miel de montagne valaisan, romarin cristallisé et amandes effilées torréfiées</div>
         </div>
         <div class="menu-item-price">CHF 15</div>
       </div>
       <div class="menu-item">
         <div class="menu-item-text">
-          <div class="menu-item-name">Tarte fine aux abricots du Valais</div>
-          <div class="menu-item-desc">Crème d'amandes, glace au miel de montagne, romarin cristallisé</div>
+          <div class="menu-item-name">Millefeuille à la crème légère vanillée</div>
+          <div class="menu-item-desc">Fraises des champs et framboises du Valais, coulis de fruits rouges, sucre glace et pistaches effilées</div>
         </div>
-        <div class="menu-item-price">CHF 14</div>
+        <div class="menu-item-price">CHF 15</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-text">
+          <div class="menu-item-name">Soufflé chaud au Grand Marnier</div>
+          <div class="menu-item-desc">Servi à la minute, crème anglaise à la vanille de Tahiti — à commander en début de repas</div>
+        </div>
+        <div class="menu-item-price">CHF 18</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-text">
+          <div class="menu-item-name">Panna cotta à la lavande du Valais</div>
+          <div class="menu-item-desc">Coulis de myrtilles sauvages, tuile au sésame caramélisé et zeste de citron confit</div>
+        </div>
+        <div class="menu-item-price">CHF 13</div>
       </div>
       <div class="menu-item">
         <div class="menu-item-text">
           <div class="menu-item-name">Sélection de fromages valaisans</div>
-          <div class="menu-item-desc">Raclette affinée des caves, Tomme de brebis, Bagnes AOC, pain aux noix et confiture de figue</div>
+          <div class="menu-item-desc">Raclette affinée des caves de Bagnes, Tomme de brebis, Vacherin fribourgeois, pain aux noix et confiture de figue</div>
         </div>
-        <div class="menu-item-price">CHF 18</div>
+        <div class="menu-item-price">CHF 19</div>
       </div>
     </div>
 
+    <!-- MENUS COMPOSÉS -->
     <div id="menus" class="menu-panel fade-up">
       <div class="menu-item">
         <div class="menu-item-text">
-          <div class="menu-item-name t" data-fr="Menu Valère — 3 plats" data-de="Menü Valère — 3 Gänge">Menu Valère — 3 plats</div>
-          <div class="menu-item-desc t" data-fr="Entrée + plat principal + dessert au choix parmi la carte du jour" data-de="Vorspeise + Hauptgericht + Dessert nach Wahl aus der Tageskarte">Entrée + plat principal + dessert au choix parmi la carte du jour</div>
+          <div class="menu-item-name t" data-fr="Menu Valère — 3 services" data-de="Menü Valère — 3 Gänge">Menu Valère — 3 services</div>
+          <div class="menu-item-desc t" data-fr="Entrée au choix · Viande ou poisson du jour · Dessert au choix. Inclus : pain maison, amuse-bouche d'accueil, café ou thé." data-de="Vorspeise nach Wahl · Fleisch oder Fisch des Tages · Dessert nach Wahl. Inkl. Hausbrot, Amuse-bouche, Kaffee oder Tee.">Entrée au choix · Viande ou poisson du jour · Dessert au choix. Inclus : pain maison, amuse-bouche d'accueil, café ou thé.</div>
         </div>
         <div class="menu-item-price">CHF 78</div>
       </div>
       <div class="menu-item">
         <div class="menu-item-text">
-          <div class="menu-item-name t" data-fr="Menu Tourbillon — 4 plats" data-de="Menü Tourbillon — 4 Gänge">Menu Tourbillon — 4 plats</div>
-          <div class="menu-item-desc t" data-fr="Amuse-bouche + entrée + plat principal + dessert, avec accords mets et vins suggérés" data-de="Amuse-bouche + Vorspeise + Hauptgericht + Dessert, mit Weinempfehlungen">Amuse-bouche + entrée + plat principal + dessert, avec accords mets et vins suggérés</div>
+          <div class="menu-item-name t" data-fr="Menu Tourbillon — 4 services" data-de="Menü Tourbillon — 4 Gänge">Menu Tourbillon — 4 services</div>
+          <div class="menu-item-desc t" data-fr="Amuse-bouche · Entrée au choix · Viande ou poisson au choix · Dessert au choix. Inclus : pain maison, mignardises, café ou thé. Accords vins suggérés sur demande (+CHF 38)." data-de="Amuse-bouche · Vorspeise · Fleisch oder Fisch · Dessert. Inkl. Hausbrot, Petits fours, Kaffee oder Tee. Weinbegleitung auf Anfrage (+CHF 38).">Amuse-bouche · Entrée au choix · Viande ou poisson au choix · Dessert au choix. Inclus : pain maison, mignardises, café ou thé. Accords vins suggérés sur demande (+CHF 38).</div>
         </div>
         <div class="menu-item-price">CHF 98</div>
       </div>
       <div class="menu-item">
         <div class="menu-item-text">
-          <div class="menu-item-name t" data-fr="Menu Végétarien — 3 plats" data-de="Vegetarisches Menü — 3 Gänge">Menu Végétarien — 3 plats</div>
-          <div class="menu-item-desc t" data-fr="Sélection végétarienne du moment, élaborée selon les arrivages du jardin et du marché" data-de="Aktuelle vegetarische Auswahl, nach Garten- und Marktangebot zusammengestellt">Sélection végétarienne du moment, élaborée selon les arrivages du jardin et du marché</div>
+          <div class="menu-item-name t" data-fr="Menu Prestige — 6 services" data-de="Prestige-Menü — 6 Gänge">Menu Prestige — 6 services</div>
+          <div class="menu-item-desc t" data-fr="Amuse-bouche · Mise en bouche froide · Entrée · Sorbet de transition · Plat principal · Dessert. Inclus : pain maison, mignardises, café ou thé. Accord mets et vins disponible (+CHF 58)." data-de="Amuse-bouche · Kalter Auftakt · Vorspeise · Zwischen-Sorbet · Hauptgang · Dessert. Inkl. Hausbrot, Petits fours, Kaffee oder Tee. Weinbegleitung verfügbar (+CHF 58).">Amuse-bouche · Mise en bouche froide · Entrée · Sorbet de transition · Plat principal · Dessert. Inclus : pain maison, mignardises, café ou thé. Accord mets et vins disponible (+CHF 58).</div>
+        </div>
+        <div class="menu-item-price">CHF 135</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-text">
+          <div class="menu-item-name t" data-fr="Menu Végétarien — 3 services" data-de="Vegetarisches Menü — 3 Gänge">Menu Végétarien — 3 services</div>
+          <div class="menu-item-desc t" data-fr="Entrée végétarienne · Plat végétarien du marché · Dessert au choix. Élaboré chaque jour selon les arrivages du jardin et des producteurs locaux. Inclus : pain maison, café ou thé." data-de="Vegetarische Vorspeise · Vegetarisches Tagesgericht · Dessert nach Wahl. Täglich nach Garten- und Marktangebot zubereitet. Inkl. Hausbrot, Kaffee oder Tee.">Entrée végétarienne · Plat végétarien du marché · Dessert au choix. Élaboré chaque jour selon les arrivages du jardin et des producteurs locaux. Inclus : pain maison, café ou thé.</div>
           <span class="menu-item-tag t" data-fr="Végétarien" data-de="Vegetarisch">Végétarien</span>
         </div>
         <div class="menu-item-price">CHF 68</div>
       </div>
+      <div class="menu-item">
+        <div class="menu-item-text">
+          <div class="menu-item-name t" data-fr="Menu Affaires — Midi uniquement" data-de="Business-Menü — nur Mittag">Menu Affaires — Midi uniquement</div>
+          <div class="menu-item-desc t" data-fr="Plat du jour + dessert ou entrée + plat. Servi en 45 minutes chrono pour vos repas d'affaires. Inclus : eau minérale, café." data-de="Tagesgericht + Dessert oder Vorspeise + Hauptgang. In 45 Minuten serviert, ideal für Geschäftsessen. Inkl. Mineralwasser, Kaffee.">Plat du jour + dessert ou entrée + plat. Servi en 45 minutes chrono pour vos repas d'affaires. Inclus : eau minérale, café.</div>
+        </div>
+        <div class="menu-item-price">CHF 42</div>
+      </div>
       <div class="menu-formule-note">
-        <p class="t" data-fr="Nos menus sont servis uniquement sur réservation. Une allergie, une intolérance ? Signalez-le lors de votre réservation, nous adaptons chaque menu avec plaisir." data-de="Unsere Menüs werden ausschliesslich auf Reservierung serviert. Eine Allergie, eine Unverträglichkeit? Teilen Sie uns dies bei der Reservierung mit, wir passen jedes Menü gerne an.">Nos menus sont servis uniquement sur réservation. Une allergie, une intolérance ? Signalez-le lors de votre réservation, nous adaptons chaque menu avec plaisir.</p>
+        <p class="t" data-fr="Tous nos menus sont servis sur réservation. Allergies ou intolérances : merci de nous en informer à la réservation, nous adaptons chaque menu avec plaisir. Groupes et événements privés : nous contacter directement." data-de="Alle Menüs werden auf Reservierung serviert. Allergien oder Unverträglichkeiten bitte bei der Reservierung angeben. Gruppen und private Veranstaltungen: bitte direkt kontaktieren.">Tous nos menus sont servis sur réservation. Allergies ou intolérances : merci de nous en informer à la réservation, nous adaptons chaque menu avec plaisir. Groupes et événements privés : nous contacter directement.</p>
       </div>
     </div>
   </div>
@@ -1434,11 +1542,11 @@
   if (urlLang === 'de') setLang('de');
 
   /* ====== MENU TABS ====== */
-  function showTab(id) {
+  function showTab(btn, id) {
     document.querySelectorAll('.menu-panel').forEach(p => p.classList.remove('active'));
     document.querySelectorAll('.menu-tab').forEach(t => t.classList.remove('active'));
     document.getElementById(id).classList.add('active');
-    event.target.classList.add('active');
+    btn.classList.add('active');
   }
 
   /* ====== FADE ON SCROLL ====== */

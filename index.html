@@ -355,6 +355,7 @@
     .hero-photo {
       position: absolute;
       inset: 0;
+      pointer-events: none;
       background-image: url('https://images.unsplash.com/photo-1559339352-11d035aa65de?w=1920&q=85&auto=format&fit=crop');
       background-size: cover;
       background-position: center;
@@ -364,6 +365,7 @@
       content: '';
       position: absolute;
       inset: 0;
+      pointer-events: none;
       background:
         linear-gradient(to bottom, rgba(4,10,6,0.55) 0%, rgba(4,10,6,0.2) 40%, rgba(4,10,6,0.6) 80%, rgba(4,10,6,0.95) 100%),
         linear-gradient(to right, rgba(4,10,6,0.5) 0%, transparent 50%);
@@ -1146,10 +1148,12 @@
       <button class="menu-tab t" onclick="showTab(this,'poissons')" data-fr="Poissons" data-de="Fisch">Poissons</button>
       <button class="menu-tab t" onclick="showTab(this,'desserts')" data-fr="Desserts" data-de="Desserts">Desserts</button>
       <button class="menu-tab t" onclick="showTab(this,'menus')" data-fr="Menus du soir" data-de="Abendmenüs">Menus du soir</button>
+      <button class="menu-tab t" onclick="showTab(this,'jeunes')" data-fr="Jeunes hôtes" data-de="Kinder">Jeunes hôtes</button>
     </div>
 
     <!-- ENTRÉES -->
     <div id="entrees" class="menu-panel active fade-up fade-up-delay-2">
+      <div class="menu-category-sep">Hors d'oeuvres</div>
       <div class="menu-item">
         <div class="menu-item-text">
           <div class="menu-item-name">Velouté à la courge</div>
@@ -1200,17 +1204,16 @@
         </div>
         <div class="menu-item-price">CHF 30</div>
       </div>
+      <div class="menu-category-sep">Salades</div>
       <div class="menu-item">
         <div class="menu-item-text">
           <div class="menu-item-name">Salade verte</div>
-          <div class="menu-item-desc"></div>
         </div>
         <div class="menu-item-price">CHF 11</div>
       </div>
       <div class="menu-item">
         <div class="menu-item-text">
           <div class="menu-item-name">Salade mêlée</div>
-          <div class="menu-item-desc"></div>
         </div>
         <div class="menu-item-price">CHF 15</div>
       </div>
@@ -1221,13 +1224,6 @@
           <div class="menu-item-desc">Salade verte aux noix</div>
         </div>
         <div class="menu-item-price">CHF 32</div>
-      </div>
-      <div class="menu-item">
-        <div class="menu-item-text">
-          <div class="menu-item-name">Tartare de boeuf</div>
-          <div class="menu-item-desc">Pommes frites, toasts et beurre</div>
-        </div>
-        <div class="menu-item-price">CHF 38</div>
       </div>
     </div>
 
@@ -1263,6 +1259,14 @@
       </div>
       <div class="menu-item">
         <div class="menu-item-text">
+          <div class="menu-item-name">Tartare de boeuf</div>
+          <div class="menu-item-desc">Pommes frites, toasts et beurre</div>
+        </div>
+        <div class="menu-item-price">CHF 38</div>
+      </div>
+      <div class="menu-category-sep">Végétarien</div>
+      <div class="menu-item">
+        <div class="menu-item-text">
           <div class="menu-item-name">Mets végétarien éclatant de couleurs et de saveurs</div>
           <div class="menu-item-desc">Légumes, pâtes, champignons, riz, raviolis, pommes de terre selon le marché du jour</div>
           <span class="menu-item-tag">Végétarien</span>
@@ -1289,21 +1293,6 @@
           <div class="menu-item-desc">Wok de légumes et nouilles de riz aux saveurs d'Asie</div>
         </div>
         <div class="menu-item-price">CHF 49</div>
-      </div>
-      <div class="menu-category-sep">Pour nos jeunes hôtes</div>
-      <div class="menu-item">
-        <div class="menu-item-text">
-          <div class="menu-item-name">Nuggets de poulet suisse</div>
-          <div class="menu-item-desc">Pommes frites et cassolette de légumes</div>
-        </div>
-        <div class="menu-item-price">CHF 14</div>
-      </div>
-      <div class="menu-item">
-        <div class="menu-item-text">
-          <div class="menu-item-name">Steak de boeuf, sauce hollandaise aux épices café de Paris</div>
-          <div class="menu-item-desc">Pommes frites et cassolette de légumes</div>
-        </div>
-        <div class="menu-item-price">CHF 16</div>
       </div>
     </div>
 
@@ -1416,6 +1405,24 @@
 
       <div class="menu-formule-note">
         <p>Menus servis le soir sur réservation. Pour vos banquets et événements privés, demandez nos propositions de menus sur mesure.</p>
+      </div>
+    </div>
+
+    <!-- JEUNES HÔTES -->
+    <div id="jeunes" class="menu-panel fade-up">
+      <div class="menu-item">
+        <div class="menu-item-text">
+          <div class="menu-item-name">Nuggets de poulet suisse</div>
+          <div class="menu-item-desc">Pommes frites et cassolette de légumes</div>
+        </div>
+        <div class="menu-item-price">CHF 14</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-text">
+          <div class="menu-item-name">Steak de boeuf, sauce hollandaise aux épices café de Paris</div>
+          <div class="menu-item-desc">Pommes frites et cassolette de légumes</div>
+        </div>
+        <div class="menu-item-price">CHF 16</div>
       </div>
     </div>
   </div>

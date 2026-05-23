@@ -49,7 +49,7 @@
   <style>
     /* ====== RESET & BASE ====== */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; overflow-x: hidden; }
     body {
       font-family: 'DM Sans', system-ui, sans-serif;
       font-weight: 400;
@@ -1065,6 +1065,19 @@
     .fade-up-delay-4 { transition-delay: 0.4s; }
 
     /* ====== RESPONSIVE ====== */
+    @media (max-width: 639px) {
+      /* Hero badge : réduire le letter-spacing pour tenir sur mobile */
+      .hero-badge { max-width: calc(100vw - 2.5rem); overflow: hidden; }
+      .hero-badge span { font-size: 0.68rem; letter-spacing: 0.08em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+      /* Carte des vins : scroll horizontal à l'intérieur de la section */
+      .wine-category { overflow-x: auto; -webkit-overflow-scrolling: touch; padding-bottom: 0.5rem; }
+      .wine-header-row, .wine-row { min-width: 520px; }
+
+      /* Calendrier : éviter que le popup sorte du viewport */
+      .cal-popup { min-width: 0; width: calc(100vw - 3rem); left: 0; right: 0; }
+    }
+
     @media (min-width: 640px) {
       .form-row { grid-template-columns: 1fr 1fr; }
       .testi-grid { grid-template-columns: 1fr 1fr; }
